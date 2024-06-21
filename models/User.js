@@ -32,8 +32,12 @@ const UserSchema = new mongoose.Schema({
     followings: {
         type: Array,
         default:[]
+    },
+    description: {
+        type: String
+        
     }
 
 }, {timestamps: true})
 
-mongoose.exports = mongoose.model("User", UserSchema)
+module.exports = mongoose.model("User", UserSchema)
