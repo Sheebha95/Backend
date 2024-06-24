@@ -5,6 +5,7 @@ const helmet = require("helmet")
 const morgan = require("morgan")
 const userRoutes = require("./routes/users")
 const authRoutes = require("./routes/auth")
+const postRoutes = require("./routes/posts")
 
 
 //middleware
@@ -26,6 +27,8 @@ mongoose.connect("mongodb+srv://sheebha:rani123@cluster0.o8fzkn6.mongodb.net/")
 //restapi
 app.use("/api/user", userRoutes)
 app.use("/api/auth", authRoutes)
+app.use("/api/post", postRoutes)
+
 
 
 
